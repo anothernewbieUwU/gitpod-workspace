@@ -8,7 +8,7 @@ RUN /sbin/useradd -m -U --uid 1001 gitpod
 USER gitpod
 
 # Setup Localtime
-RUN sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+RUN ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Set the locale
 ENV LC_ALL en_US.UTF-8
