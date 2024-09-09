@@ -2,7 +2,7 @@
 FROM archlinux:latest
 
 # Create user gitpod
-RUN useradd -l -u 33333 -md /home/gitpod -s /bin/zsh -p gitpod gitpod && \
+RUN /sbin/useradd -m -U --uid 1001 gitpod
 
 # Switch to Gitpod User
 USER gitpod
