@@ -1,5 +1,8 @@
 # ArchLinux Docker Image
 FROM archlinux:latest
 
-# Download Git
+# Update and Upgrade
+RUN pacman -Sy && pacman -Syu
+
+# Install Git
 RUN pacman -S git
