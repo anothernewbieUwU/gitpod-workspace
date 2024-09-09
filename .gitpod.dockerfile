@@ -1,15 +1,6 @@
 # ArchLinux Docker Image
 FROM archlinux:latest
 
-# Create user gitpod
-RUN /sbin/useradd -m -U --uid 1001 gitpod
-
-# Switch to Gitpod User
-USER gitpod
-
-# Setup Localtime
-RUN ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-
 # Set the locale
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
