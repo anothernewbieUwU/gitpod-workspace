@@ -6,12 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Update all packages
 RUN apt update
-RUN apt install -y apt-utils software-properties-common apt-transport-https sudo \
-    openssh-server screen python3 git android-tools-adb bc bison \
-    build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses-dev \
-    lib32readline-dev lib32z1-dev  liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev \
-    libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev \
-    libtinfo5 libncurses5 tmux ccache zsh neofetch locales locales-all wget
+RUN apt upgrade
 
 # Create user gitpod
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/zsh -p gitpod gitpod && \
