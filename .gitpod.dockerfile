@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Update all packages
 RUN apt update -y
 RUN apt upgrade -y
-RUN apt install -y sudo locales locales-all wget
+RUN apt install -y sudo locales locales-all wget zsh
 
 # Create user gitpod
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/zsh -p gitpod gitpod && \
