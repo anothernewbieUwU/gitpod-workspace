@@ -1,12 +1,9 @@
 # ArchLinux Docker Image
 FROM ubuntu:latest
 
-# Non-interactive installation mode
-ARG DEBIAN_FRONTEND=noninteractive
-
 # Update all packages
-RUN apt update
-RUN apt upgrade
+RUN apt update -y
+RUN apt upgrade -y
 
 # Create user gitpod
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/zsh -p gitpod gitpod && \
