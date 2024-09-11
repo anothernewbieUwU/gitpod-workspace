@@ -5,6 +5,9 @@ FROM ubuntu:latest
 RUN apt update -y
 RUN apt upgrade -y
 
+# Install sudo
+RUN apt install -y sudo
+
 # Create user gitpod
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/zsh -p gitpod gitpod && \
     # passwordless sudo for users in the 'sudo' group
