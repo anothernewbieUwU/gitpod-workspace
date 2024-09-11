@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Non-interactive installation mode
-ENV DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Update all packages
 RUN apt update
